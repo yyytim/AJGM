@@ -22,9 +22,9 @@ from AJGM import *
 
 ### Data description and loading
 
-In the following example, we consider generating samples from three subtypes. The method of sample generation is consistent with the simulation study described in paper. Each subtype has the same number of genes and the same number of samples($p=200$, ${n_k} = 300$).
+In the following example, we consider generating samples from three subtypes. The method of sample generation is consistent with the simulation study described in paper. Each subtype has the same number of genes and the same number of samples($p=100$, ${n_k} = 300$).
 
-In AJGM, the input data should be a matrix where each row represents the gene expression values of different samples. In this example, the input matrix has 900 rows and 200 columns.
+In AJGM, the input data should be a matrix where each row represents the gene expression values of different samples. In this example, the input matrix has 900 rows and 100 columns.
 
 ```python
 import pandas as pd
@@ -71,8 +71,8 @@ The AJGM function returns a dictionary with the following components:
 
 - pie: Estimated parameters $\pi$.
 - mu: Estimated parameters $\mu$.
-- covinv: Estimated parameters $\Omega$ (The precision matrices for $K$ subtypes and an overall precision matrix). The matrix covinv is of size $p$ rows by $p*(K+1)$ columns. Columns $1$ to $p$ represent the precision matrices for subgroup 1, columns $p+1$ to $2p$ represent subgroup 2, and so on. Columns $pK+1$ to $p*(K+1)$ represent the precision matrix for the overall network.
-- membership: Cell classification results.
+- covinv: Estimated parameters $\Omega$ (The precision matrices for $K$ subtypes and an overall precision matrix). The matrix covinv is of size $p$ rows by $p*(K+1)$ columns. Columns $1$ to $p$ represent the precision matrices for subtype 1, columns $p+1$ to $2p$ represent subtype 2, and so on. Columns $pK+1$ to $p*(K+1)$ represent the precision matrix for the overall network.
+- membership: Sample classification results.
 
 ### References
 
