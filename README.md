@@ -71,7 +71,7 @@ The AJGM function returns a dictionary with the following components:
 
 - pie: Estimated parameters $\pi$.
 - mu: Estimated parameters $\mu$.
-- covinv: Estimated parameters $\Omega$ (The precision matrices for $K$ subtypes and an overall precision matrix). The matrix covinv is of size $p$ rows by $p*(K+1)$ columns. Columns $1$ to $p$ represent the precision matrices for subgroup 1, columns $p+1$ to $2*p$ represent subgroup 2, and so on. Columns $p*K+1$ to $p*(K+1)$ represent the precision matrix for the overall network.
+- covinv: Estimated parameters $\Omega$ (The precision matrices for $K$ subtypes and an overall precision matrix). The matrix covinv is of size $p$ rows by $p*(K+1)$ columns. Columns $1$ to $p$ represent the precision matrices for subgroup 1, columns $p+1$ to $2p$ represent subgroup 2, and so on. Columns $pK+1$ to $p*(K+1)$ represent the precision matrix for the overall network.
 - membership: Cell classification results.
 
 ### References
