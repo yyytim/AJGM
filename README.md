@@ -53,16 +53,16 @@ A = data.to_numpy()
 We first use method setting ${x_l}$ as $x_l^{'}$ to obtain representative sample Y. Since the generated data follows a mixture of multivariate normal distributions, data imputation is not necessary.
 
 ```python
-res1=AJGM(X=A, Y=A, L=3, lambda1=0.01, lambda2=0.01, lambda3=0.1,miu=0.1,tre=0.1,impute_x=False,
-impute_y='none', EMthreshold=0.1, MAX_iter=100)
+res1=AJGM(X=A,Y=A,L=3,lambda1=0.01,lambda2=0.01,lambda3=0.1,miu=0.1,tre=0.1,impute_x=False,
+impute_y='none',EMthreshold=0.1,MAX_iter=100)
 ```
 
 We then use sampling to generation representative sample Y. The function ‘sample_multivariate_normal‘ can obtain Y through sampling. The parameter n represents the number of samples obtained through sampling.
 
 ```python
 B=sample_multivariate_normal(A, n=100)
-res2=AJGM(X=A, Y=B, L=3, lambda1=0.01, lambda2=0.01, lambda3=0.1,miu=0.1,tre=0.1,impute_x=False,
-impute_y='none', EMthreshold=0.1, MAX_iter=100)
+res2=AJGM(X=A,Y=B,L=3,lambda1=0.01,lambda2=0.01,lambda3=0.1,miu=0.1,tre=0.1,impute_x=False,
+impute_y='none',EMthreshold=0.1,MAX_iter=100)
 ```
 
 ### Structure of the output
